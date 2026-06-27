@@ -1,5 +1,4 @@
 package rpg.entities;
-import rpg.enums.ReputationLevel;
 
 public abstract class Character {
 
@@ -42,8 +41,6 @@ public abstract class Character {
     // ── Абстрактні методи ──────────────────────────────────
 
     public abstract String getDescription();
-
-    public abstract ReputationLevel getReputationReaction();
 
     // ── Гетери / Сетери ────────────────────────────────────
 
