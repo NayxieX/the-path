@@ -37,8 +37,14 @@ public class Chapter5 implements Chapter {
                 System.out.println("Старий тисне руку: \"Ти вже зробив більше ніж ми сміли сподіватись.\"");
             }
             case 2 -> {
-                System.out.println("Претендент дає карту і двох солдатів.");
-                System.out.println("На підході: \"Ми не підемо далі.\"");
+                String claimantName = switch (hero.getClaimantSupported()) {
+                    case 1 -> "Кейн";
+                    case 2 -> "Сорін";
+                    default -> "Алан";
+                };
+                System.out.println(claimantName + " тримає слово - карта і двоє солдатів ведуть тебе більшу частину шляху.");
+                System.out.println("Та на підході до стін один з них зупиняється, не відриваючи очей від чорних веж. \"Ми не підемо далі. Накази наказами, а це...\"");
+                System.out.println("Він тицяє карту тобі в руки і відступає назад, не чекаючи відповіді. Далі - сам.");
             }
             default -> {
                 System.out.println("Армія чекає за пагорбом. \"Ти підеш першим.\"");
